@@ -186,7 +186,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be71e4b09e4220b448dd3407a71f6180,
         type: 3}
       propertyPath: m_Name
-      value: ship
+      value: greenShip
       objectReference: {fileID: 0}
     - target: {fileID: 6703957281922639038, guid: be71e4b09e4220b448dd3407a71f6180,
         type: 3}
@@ -370,6 +370,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &1031786300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031786302}
+  - component: {fileID: 1031786301}
+  m_Layer: 0
+  m_Name: CannonBallEmitter2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1031786301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031786300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcad0fb2a9252a4bb3186da869ef711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonBallPrefab: {fileID: 713524872639267541, guid: b5ac9e582cdbc4d4cb1e45b9fa2e0c8b,
+    type: 3}
+  cannonVel: 25
+  delay: 2
+--- !u!4 &1031786302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031786300}
+  m_LocalRotation: {x: -0.27059805, y: -0.6532815, z: -0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 19.615, y: 2.807, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -45, y: -90, z: 0}
 --- !u!1 &1060707909
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +448,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonBallPrefab: {fileID: 713524872639267541, guid: b5ac9e582cdbc4d4cb1e45b9fa2e0c8b,
     type: 3}
-  cannonVel: 18
+  cannonVel: 25
+  delay: 0
 --- !u!4 &1060707911
 Transform:
   m_ObjectHideFlags: 0
@@ -409,13 +457,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060707909}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.27059805, y: -0.6532815, z: -0.27059805, w: 0.6532815}
   m_LocalPosition: {x: 19.615, y: 2.807, z: -1.9612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -45, y: -90, z: 0}
 --- !u!1001 &1110650733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -481,7 +529,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be71e4b09e4220b448dd3407a71f6180,
         type: 3}
       propertyPath: m_Name
-      value: ship (1)
+      value: purpleShip
       objectReference: {fileID: 0}
     - target: {fileID: 6703957281922639038, guid: be71e4b09e4220b448dd3407a71f6180,
         type: 3}

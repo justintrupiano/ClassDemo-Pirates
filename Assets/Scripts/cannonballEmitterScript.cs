@@ -10,6 +10,8 @@ public class cannonballEmitterScript : MonoBehaviour
     // Speed to launch cannonBall
     public float cannonVel;
 
+    // Seconds to wait before firing cannon
+    public int delay;
 
     // Update runs every frame
     void Update(){
@@ -17,18 +19,24 @@ public class cannonballEmitterScript : MonoBehaviour
       // Check keypress
       if (Input.GetKeyDown(KeyCode.Space)){
 
-        // Instantiate new cannonBall object
-        GameObject cannonBall = Instantiate(cannonBallPrefab);
+        // Shoot cannon after delay
+        Invoke("ShootCannon", delay);
 
-        // Set position to position of emitter
-        cannonBall.transform.position = transform.position;
-
-        // Rotate the cannonBall forward direction to match emitter rotation
-        cannonBall.transform.rotation = transform.rotation;
-
-        // Move cannonBall forward with cannonVel
-        cannonBall.GetComponent<Rigidbody>().velocity = cannonBall.transform.forward * cannonVel;
       }
     }
-    
+
+    void ShootCannon(){
+      // Instantiate new cannonBall object
+      GameObject cannonBall = Instantiate(cannonBallPrefab);
+
+      // Set position to position of emitter
+      cannonBall.transform.position = transform.position;
+
+      // Rotate the cannonBall forward direction to match emitter rotation
+      cannonBall.transform.rotation = transform.rotation;
+
+      // Move cannonBall forward with cannonVel
+      cannonBall.GetComponent<Rigidbody>().velocity = cannonBall.transform.forward * cannonVel;
+    }
+
 }
