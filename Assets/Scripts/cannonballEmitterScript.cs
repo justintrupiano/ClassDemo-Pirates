@@ -21,7 +21,6 @@ public class cannonballEmitterScript : MonoBehaviour
 
         // Shoot cannon after delay
         Invoke("ShootCannon", delay);
-
       }
     }
 
